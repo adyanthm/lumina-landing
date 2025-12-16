@@ -149,7 +149,7 @@ const Hero = () => (
     </p>
 
     <div className="flex flex-col md:flex-row gap-6 w-full md:w-auto items-center justify-center">
-      <a href="/Lumina%20Grade%20Setup%200.0.0.exe" download className="group relative flex items-center justify-center gap-3 border border-cyan-500 text-cyan-400 px-8 py-4 text-sm font-bold uppercase tracking-wider overflow-hidden min-w-[240px] hover:text-black transition-colors duration-300">
+      <a href="https://github.com/adyanthm/lumina-landing/releases/download/production/Lumina.Grade.Setup.0.0.0.exe" download className="group relative flex items-center justify-center gap-3 border border-cyan-500 text-cyan-400 px-8 py-4 text-sm font-bold uppercase tracking-wider overflow-hidden min-w-[240px] hover:text-black transition-colors duration-300">
         <div className="absolute inset-0 bg-cyan-400 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 origin-left ease-out"></div>
         <div className="relative z-10 flex items-center gap-3">
           <Download className="w-5 h-5" />
@@ -244,7 +244,7 @@ const ComparisonSection = () => (
             </li>
           </ul>
 
-          <a href="/Lumina%20Grade%20Setup%200.0.0.exe" download className="w-full py-3 text-center block bg-cyan-400 text-black text-sm font-bold hover:bg-cyan-300 transition-colors">
+          <a href="https://github.com/adyanthm/lumina-landing/releases/download/production/Lumina.Grade.Setup.0.0.0.exe" download className="w-full py-3 text-center block bg-cyan-400 text-black text-sm font-bold hover:bg-cyan-300 transition-colors">
             DOWNLOAD BETA
           </a>
         </div>

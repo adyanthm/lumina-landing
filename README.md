@@ -1,20 +1,54 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# LuminaGrade Landing Page
 
-# Run and deploy your AI Studio app
+Official landing page for **LuminaGrade** – a professional, privacy-first cinematic color grading tool.
 
-This contains everything you need to run your app locally.
+**Note:** This repository contains the source code for the **landing page website only**. The core LuminaGrade color grading algorithm and the desktop application are **proprietary software** and are not open source.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1pKbgp1dlexlm1CEyBI2V9pntem4tpdad
+## 🚀 About LuminaGrade
 
-## Run Locally
+LuminaGrade is a desktop application designed for high-fidelity video and image color grading.
 
-**Prerequisites:**  Node.js
+- **Zero-Knowledge Architecture:** 100% offline processing. No data collection, metrics, or telemetry.
+- **Local Processing:** Utilizes client-side GPU/CPU hardware acceleration.
+- **Cinematic Quality:** Mathematical precision for density and color accuracy.
+- **Privacy First:** Designed for sensitive footage; air-gap ready.
 
+## 🛠 Tech Stack
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+The landing page is built with performance and aesthetics in mind:
+
+- **Framework:** React 19 + Vite
+- **Language:** TypeScript
+- **Styling:** Vanilla CSS / Utility Classes
+- **Icons:** Lucide React
+- **Assets:** Optimized looping MP4 backgrounds
+
+## ⚡ Quick Start
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/adyanthm/lumina-landing.git
+    cd lumina-landing
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Run development server**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Build for production**
+    ```bash
+    npm run build
+    ```
+
+## 📄 License
+
+The code for this landing page is provided for transparency and community reference.
+
+- **Website Source Code:** Open Source.
+- **LuminaGrade Application & Algorithms:** **Proprietary**. All rights reserved. Reverse engineering or redistribution of the binary installers is prohibited.
