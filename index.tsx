@@ -149,7 +149,7 @@ const Hero = () => (
     </p>
 
     <div className="flex flex-col md:flex-row gap-6 w-full md:w-auto items-center justify-center">
-      <a href="/LuminaGradeSetup.exe" download className="group relative flex items-center justify-center gap-3 border border-cyan-500 text-cyan-400 px-8 py-4 text-sm font-bold uppercase tracking-wider overflow-hidden min-w-[240px] hover:text-black transition-colors duration-300">
+      <a href="/Lumina%20Grade%20Setup%200.0.0.exe" download className="group relative flex items-center justify-center gap-3 border border-cyan-500 text-cyan-400 px-8 py-4 text-sm font-bold uppercase tracking-wider overflow-hidden min-w-[240px] hover:text-black transition-colors duration-300">
         <div className="absolute inset-0 bg-cyan-400 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 origin-left ease-out"></div>
         <div className="relative z-10 flex items-center gap-3">
           <Download className="w-5 h-5" />
@@ -244,7 +244,7 @@ const ComparisonSection = () => (
             </li>
           </ul>
 
-          <a href="/LuminaGradeSetup.exe" download className="w-full py-3 text-center block bg-cyan-400 text-black text-sm font-bold hover:bg-cyan-300 transition-colors">
+          <a href="/Lumina%20Grade%20Setup%200.0.0.exe" download className="w-full py-3 text-center block bg-cyan-400 text-black text-sm font-bold hover:bg-cyan-300 transition-colors">
             DOWNLOAD BETA
           </a>
         </div>
@@ -277,17 +277,30 @@ const DemoPlaceholder = ({ label, src, className = "" }: { label: string, src?: 
     return () => observer.disconnect();
   }, [src]);
 
+  const isVideo = src?.endsWith('.mp4');
+
   return (
     <div
       ref={containerRef}
       className={`w-full bg-zinc-900 border border-zinc-800 flex items-center justify-center relative overflow-hidden group ${className}`}
     >
       {src && isPlaying ? (
-        <img
-          src={src}
-          alt={label}
-          className="absolute inset-0 w-full h-full object-contain"
-        />
+        isVideo ? (
+          <video
+            src={src}
+            className="absolute inset-0 w-full h-full object-contain"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        ) : (
+          <img
+            src={src}
+            alt={label}
+            className="absolute inset-0 w-full h-full object-contain"
+          />
+        )
       ) : (
         <>
           <div className="absolute inset-0 flex items-center justify-center z-10">
@@ -364,13 +377,13 @@ const Features = () => (
           ))}
         </ul>
       </div>
-      <DemoPlaceholder label="Cinematic Grading Demo" src="/pure_quality.gif" className="aspect-[4/3] shadow-[0_0_30px_rgba(34,211,238,0.1)]" />
+      <DemoPlaceholder label="Cinematic Grading Demo" src="/pure_quality.mp4" className="aspect-[4/3] shadow-[0_0_30px_rgba(34,211,238,0.1)]" />
     </div>
 
     {/* Feature 2 */}
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div className="order-2 lg:order-1">
-        <DemoPlaceholder label="Interface Workflow" src="/radical_simplicity.gif" className="aspect-[4/3] shadow-[0_0_30px_rgba(34,211,238,0.1)]" />
+        <DemoPlaceholder label="Interface Workflow" src="/radical_simplicity.mp4" className="aspect-[4/3] shadow-[0_0_30px_rgba(34,211,238,0.1)]" />
       </div>
       <div className="space-y-8 order-1 lg:order-2">
         <div className="text-cyan-400 font-mono text-xs uppercase tracking-widest border-l-2 border-cyan-400 pl-4">
@@ -467,7 +480,7 @@ const App = () => {
 
         {/* Main GIF Placeholder */}
         <div className="max-w-6xl mx-auto px-6 mb-20">
-          <DemoPlaceholder label="MAIN WORKFLOW VISUALIZATION" src="/main_working.gif" className="aspect-video w-full border-zinc-800 shadow-[0_0_50px_rgba(34,211,238,0.05)]" />
+          <DemoPlaceholder label="MAIN WORKFLOW VISUALIZATION" src="/main_working.mp4" className="aspect-video w-full border-zinc-800 shadow-[0_0_50px_rgba(34,211,238,0.05)]" />
         </div>
 
         <ValueProps />
